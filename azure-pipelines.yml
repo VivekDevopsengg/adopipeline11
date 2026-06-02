@@ -14,6 +14,7 @@ steps:
       backendAzureRmStorageAccountName: 'myfirststorage123so'
       backendAzureRmContainerName: 'storage1234'
       backendAzureRmKey: 'dev.tfstate'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/main'
 
   - task: TerraformTask@5
     inputs:
