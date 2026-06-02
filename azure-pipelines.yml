@@ -19,10 +19,12 @@ steps:
     inputs:
       provider: 'azurerm'
       command: 'plan'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/main'
       environmentServiceNameAzureRM: 'connectionname'
 
   - task: TerraformTask@5
     inputs:
       provider: 'azurerm'
       command: 'apply'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/main'
       environmentServiceNameAzureRM: 'connectionname'
