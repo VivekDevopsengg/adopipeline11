@@ -1,0 +1,17 @@
+
+trigger:
+- main
+
+pool:
+  Default
+
+steps:
+  - task: TerraformTask@5
+    inputs:
+      provider: 'azurerm'
+      command: 'init'
+      backendServiceArm: 'connectionname'
+      backendAzureRmStorageAccountName: 'myfirststorage123so'
+      backendAzureRmContainerName: 'storage1234'
+      backendAzureRmKey: 'dev.tfstate'
+   
